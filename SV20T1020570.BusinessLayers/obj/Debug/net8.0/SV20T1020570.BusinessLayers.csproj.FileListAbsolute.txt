@@ -1,0 +1,17 @@
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\bin\Debug\net8.0\SV20T1020570.BusinessLayers.deps.json
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\bin\Debug\net8.0\SV20T1020570.BusinessLayers.dll
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\bin\Debug\net8.0\SV20T1020570.BusinessLayers.pdb
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\obj\Debug\net8.0\SV20T1020570.BusinessLayers.GeneratedMSBuildEditorConfig.editorconfig
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\obj\Debug\net8.0\SV20T1020570.BusinessLayers.AssemblyInfoInputs.cache
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\obj\Debug\net8.0\SV20T1020570.BusinessLayers.AssemblyInfo.cs
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\obj\Debug\net8.0\SV20T1020570.BusinessLayers.csproj.CoreCompileInputs.cache
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\obj\Debug\net8.0\SV20T1020570.BusinessLayers.dll
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\obj\Debug\net8.0\refint\SV20T1020570.BusinessLayers.dll
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\obj\Debug\net8.0\SV20T1020570.BusinessLayers.pdb
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\obj\Debug\net8.0\ref\SV20T1020570.BusinessLayers.dll
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\bin\Debug\net8.0\SV20T1020570.DataLayers.dll
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\bin\Debug\net8.0\SV20T1020570.DomainModels.dll
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\bin\Debug\net8.0\SV20T1020570.DataLayers.pdb
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\bin\Debug\net8.0\SV20T1020570.DomainModels.pdb
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\obj\Debug\net8.0\SV20T1020570.BusinessLayers.csproj.AssemblyReference.cache
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.BusinessLayers\obj\Debug\net8.0\SV20T1020570.BusinessLayers.csproj.CopyComplete

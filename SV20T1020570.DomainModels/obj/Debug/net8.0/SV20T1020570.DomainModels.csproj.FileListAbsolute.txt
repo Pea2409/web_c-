@@ -1,0 +1,11 @@
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.DomainModels\bin\Debug\net8.0\SV20T1020570.DomainModels.deps.json
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.DomainModels\bin\Debug\net8.0\SV20T1020570.DomainModels.dll
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.DomainModels\bin\Debug\net8.0\SV20T1020570.DomainModels.pdb
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.DomainModels\obj\Debug\net8.0\SV20T1020570.DomainModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.DomainModels\obj\Debug\net8.0\SV20T1020570.DomainModels.AssemblyInfoInputs.cache
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.DomainModels\obj\Debug\net8.0\SV20T1020570.DomainModels.AssemblyInfo.cs
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.DomainModels\obj\Debug\net8.0\SV20T1020570.DomainModels.csproj.CoreCompileInputs.cache
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.DomainModels\obj\Debug\net8.0\SV20T1020570.DomainModels.dll
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.DomainModels\obj\Debug\net8.0\refint\SV20T1020570.DomainModels.dll
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.DomainModels\obj\Debug\net8.0\SV20T1020570.DomainModels.pdb
+D:\2023-2024\HK 2 2023-2024\Lap_Trinh_Web\SV20T1020570\SV20T1020570.DomainModels\obj\Debug\net8.0\ref\SV20T1020570.DomainModels.dll
