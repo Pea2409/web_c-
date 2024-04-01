@@ -71,10 +71,10 @@ namespace SV20T1020570.DataLayers.SQL_Server
             bool result = false;
             using (var connection = OpenConnection())
             {
-                var sql = @"delete from Employees where EmployeeID = @employeeID";
+                var sql = @"delete from Employees where EmployeeId = @employeeId";
                 var parameters = new
                 {
-                    EmployeeID = id,
+                    EmployeeId = id,
                 };
                 result = connection.Execute(sql: sql, param: parameters, commandType: System.Data.CommandType.Text) > 0;
                 connection.Close();
@@ -90,7 +90,7 @@ namespace SV20T1020570.DataLayers.SQL_Server
                 var sql = @"select * from Employees where EmployeeID = @employeeId";
                 var parameters = new
                 {
-                    EmployeeID = id
+                    EmployeeId = id
                 };
                 data = connection.QueryFirstOrDefault<Employee>(sql: sql, param: parameters, commandType: System.Data.CommandType.Text);
                 connection.Close();
@@ -103,13 +103,13 @@ namespace SV20T1020570.DataLayers.SQL_Server
             bool result = false;
             using (var connection = OpenConnection())
             {
-                var sql = @"if exists(select * from Orders where EmployeeID = @employeeID)
+                var sql = @"if exists(select * from Orders where EmployeeID = @employeeId)
                                 select 1
                             else 
                                 select 0";
                 var parameters = new
                 {
-                    EmployeeID = id
+                    EmployeeId = id
                 };
                 result = connection.ExecuteScalar<bool>(sql: sql, param: parameters, commandType: System.Data.CommandType.Text);
                 connection.Close();
@@ -165,7 +165,7 @@ namespace SV20T1020570.DataLayers.SQL_Server
                                         Email = @email,
                                         Photo = @photo,
                                         IsWorking = @isWorking
-                                    where EmployeeId = @employeeId
+                                    where EmployeeID = @employeeId
                                  end";
                 var parameters = new
                 {

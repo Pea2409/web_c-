@@ -69,10 +69,15 @@ namespace SV20T1020570.Web.Controllers
             return View(model);
         }
         [HttpPost]
-        public IActionResult Save(Category data)
+        public IActionResult Save(Category data, IFormFile? uploadPhoto)
         {
             try
             {
+                // Kiểm soát đầu vào và đưa các thông báo lỗi vào trong ModelState (nếu có)
+                if (string.IsNullOrWhiteSpace(data.CategoryName))
+                    ModelState.AddModelError(nameof(data.CategoryName), "Vui lòng nhập tên loại hàng");
+                if (string.IsNullOrWhiteSpace(data.Description))
+                    ModelState.AddModelError(nameof(data.Description), "Vui lòng nhập mô tả loại hàng");
                 
 
                 //Thông qua thuộc tính IsValid của ModelState để kiểm tra xem có tồn tại lỗi hay không
@@ -81,7 +86,17 @@ namespace SV20T1020570.Web.Controllers
                     ViewBag.Title = data.CategoryId == 0 ? "Bổ sung loại hàng" : "Cập nhật thông tin loại hàng";
                     return View("Edit", data);
                 }
-
+                if (uploadPhoto != null)
+                {
+                    string fileName = $"{DateTime.Now.Ticks}_{uploadPhoto.FileName}"; // tên file sẽ lưu
+                    string folder = Path.Combine(ApplicationContext.HostEnviroment.WebRootPath, "images\\categories"); // đường dẫn đến thư mục lưu file
+                    string filePath = Path.Combine(folder, fileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        uploadPhoto.CopyTo(stream);
+                    }
+                    data.Photo = fileName;
+                }
                 if (data.CategoryId == 0)
                 {
                     int id = CommonDataService.AddCategory(data);

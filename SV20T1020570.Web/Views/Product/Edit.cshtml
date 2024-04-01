@@ -37,7 +37,7 @@
                 <label class="control-label col-sm-2">Loại hàng:</label>
                 <div class="col-sm-10">
                     <select class="form-control" name="CategoryId">
-                        <option>-- Loại hàng --</option>
+                        <option value="0">-- Loại hàng --</option>
                         @foreach (var item in SV20T1020570.BusinessLayers.CommonDataService.ListOfCategories())
                         {
                             if (item.CategoryId == Model.CategoryID)
@@ -50,6 +50,7 @@
                             }
                         }
                     </select> 
+                    @Html.ValidationMessage(nameof(Model.CategoryID), new { @style = "color: #f00" })
                    
                 </div>
             </div>
@@ -58,7 +59,7 @@
                 <label class="control-label col-sm-2">Nhà cung cấp:</label>
                 <div class="col-sm-10">
                     <select class="form-control" name="SupplierID">
-                        <option>-- Nhà cung cấp --</option>
+                        <option value="0">-- Nhà cung cấp --</option>
                         @foreach (var item in SV20T1020570.BusinessLayers.CommonDataService.ListOfSupplier())
                         {
                             if (item.SupplierId == Model.SupplierID)
@@ -71,6 +72,7 @@
                             }
                         }
                     </select>
+                    @Html.ValidationMessage(nameof(Model.SupplierID), new { @style = "color: #f00" })
                 </div>
             </div>
 
@@ -88,6 +90,7 @@
                 <div class="col-sm-10">
                     @* <input type="text" class="form-control" name="Price" value="@Model.Price.ToString("N0")"> *@
                     @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })
+                    @Html.ValidationMessage(nameof(Model.Price), new { @style = "color: #f00" })
                 </div>
             </div>
 
@@ -110,7 +113,7 @@
             <div class="form-group">
                 <div class="col-lg-offset-2 col-sm-10">
                     <input type="hidden" name="Photo" value="@Model.Photo" />
-                    <img id="Photo" src="~/images/products/@Model.Photo" class="img img-bordered" style="width:200px" />
+                    <img id="Photo" src="~/images/products/@(string.IsNullOrWhiteSpace(Model.Photo) ? "no-image.jpg" : Model.Photo)" class="img img-bordered" style="width:200px" />
                 </div>
             </div>
 
@@ -159,15 +162,16 @@
                 <tbody>
                     @foreach (var item in SV20T1020570.BusinessLayers.ProductDataService.ListPhotos(Model.ProductID))
                     {
+                        <tr></tr>
                         <tr>
                             <td style="vertical-align:middle">
-                                <img src="~/images/products/@item.Photo" alt="@item.Photo" style="width:100px" />
+                                <img src="~/images/products/@(string.IsNullOrWhiteSpace(item.Photo) ? "no-image.jpg" : item.Photo)" alt="@item.Photo" style="width:100px" />
                             </td>
                             <td style="vertical-align:middle;">
                                 @item.Description
                             </td>
                             <td style="vertical-align:middle;">@item.DisplayOrder</td>
-                            <td style="vertical-align:middle;"></td>
+                            <td style="vertical-align:middle;"> @(item.IsHidden ? "Không" :"Có" )</td>
                             <td style="vertical-align:middle; text-align:right">
                                 <a class="btn btn-xs btn-primary" href="~/Product/Photo/@Model.ProductID?method=edit&photoId=@item.PhotoID">
                                     <i class="fa fa-edit"></i>

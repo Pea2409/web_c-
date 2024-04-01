@@ -28,16 +28,17 @@ namespace SV20T1020570.DataLayers.SQLServer
                 var sql = @"insert into Orders(CustomerId, OrderTime, DeliveryProvince, DeliveryAddress, EmployeeID, Status)
                                 values(@CustomerID, getdate(),
                                         @DeliveryProvince, @DeliveryAddress,
-                                        @EmployeeID, 1);
+                                        @EmployeeID, @Status);
                                         select @@identity";
                 var parameters = new
                 {
                     CustomerID = data.CustomerID,
                     DeliveryProvince = data.DeliveryProvince ?? "",
                     DeliveryAddress = data.DeliveryAddress ?? "",
-                    EmployeeID = data.EmployeeID
+                    EmployeeID = data.EmployeeID,
+                    Status = 1
                 };
-                id = connection.Execute(sql: sql, param: parameters, commandType: System.Data.CommandType.Text);
+                id = connection.Query<int>(sql: sql, param: parameters, commandType: System.Data.CommandType.Text).Single();
                 connection.Close();
             }
             return id;
@@ -225,6 +226,30 @@ namespace SV20T1020570.DataLayers.SQLServer
                 connection.Close();
             }
             return list;
+        }
+
+        public bool SaveAddress(int orderID, string deliveryProvince, string deliveryAddress)
+        {
+            bool result = false;
+            using (var connection = OpenConnection())
+            {
+                var sql = @"if exists(select * from Orders
+                                            where OrderID = @OrderID )
+                                    update Orders
+                                    set DeliveryProvince = @deliveryProvince,
+                                        DeliveryAddress = @deliveryAddress
+                                    where OrderID = @OrderID 
+                                ";
+                var parameters = new
+                {
+                    OrderID = orderID,
+                    DeliveryProvince = deliveryProvince,
+                    DeliveryAddress = deliveryAddress
+                };
+                result = connection.Execute(sql: sql, param: parameters, commandType: System.Data.CommandType.Text) > 0;
+                connection.Close();
+            }
+            return result;
         }
 
         public bool SaveDetail(int orderId, int productId, int quantity, decimal salePrice)

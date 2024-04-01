@@ -66,6 +66,11 @@ namespace SV20T1020570.Web.Controllers
         {
             if (HttpContext.Request.Method == "POST")
             {
+                if (string.IsNullOrEmpty(newPassword))
+                {
+                    ModelState.AddModelError("OldPassword", "Vui lòng nhập mật khẩu cũ.");
+                    return View();
+                }
                 if (!UserAccountService.CheckPassword(userName, oldPassword))
                 {
                     ModelState.AddModelError("OldPassword", "Mật khẩu cũ không chính xác.");

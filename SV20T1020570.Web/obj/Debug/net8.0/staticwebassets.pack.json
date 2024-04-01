@@ -13,6 +13,38 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\categories\\638472337226140203_table.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\638472337226140203_table.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\categories\\638472338696474584_case.png",
+      "PackagePath": "staticwebassets\\images\\categories\\638472338696474584_case.png"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\categories\\638472341261505779_grant-ritchie-n_wXNttWVGs-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\638472341261505779_grant-ritchie-n_wXNttWVGs-unsplash.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\categories\\638472341939388563_car.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\638472341939388563_car.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\categories\\638472342158276859_lambor.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\638472342158276859_lambor.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\categories\\638472343889468952_iphone.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\638472343889468952_iphone.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\categories\\638472344755728611_case.png",
+      "PackagePath": "staticwebassets\\images\\categories\\638472344755728611_case.png"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\categories\\no-image.jpg",
+      "PackagePath": "staticwebassets\\images\\categories\\no-image.jpg"
+    },
+    {
       "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\employees\\638452304042938532_2.jpg",
       "PackagePath": "staticwebassets\\images\\employees\\638452304042938532_2.jpg"
     },
@@ -35,6 +67,18 @@
     {
       "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\employees\\638458358350397528_girl-1.jpg",
       "PackagePath": "staticwebassets\\images\\employees\\638458358350397528_girl-1.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\employees\\638466257307042482_02.03.2024 PS THUY-DIEP (514) (2).jpg",
+      "PackagePath": "staticwebassets\\images\\employees\\638466257307042482_02.03.2024 PS THUY-DIEP (514) (2).jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\employees\\638472118048142367_profile1.jpg",
+      "PackagePath": "staticwebassets\\images\\employees\\638472118048142367_profile1.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\employees\\638472120605751685_luke-miller-cOknagNY4E0-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\employees\\638472120605751685_luke-miller-cOknagNY4E0-unsplash.jpg"
     },
     {
       "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\employees\\nophoto.png",
@@ -67,6 +111,58 @@
     {
       "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638456761772884484_cj-botha-xUPZE-ndmh4-unsplash.jpg",
       "PackagePath": "staticwebassets\\images\\products\\638456761772884484_cj-botha-xUPZE-ndmh4-unsplash.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638466243288588179_vaclav-pechar-W6AqsLH6HOg-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\638466243288588179_vaclav-pechar-W6AqsLH6HOg-unsplash.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638466243740141872_kiran-ck-LSNJ-pltdu8-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\638466243740141872_kiran-ck-LSNJ-pltdu8-unsplash.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638466246433887229_mubariz-mehdizadeh-Py8F6-hRn5o-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\638466246433887229_mubariz-mehdizadeh-Py8F6-hRn5o-unsplash.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638466247882430196_grant-ritchie-n_wXNttWVGs-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\638466247882430196_grant-ritchie-n_wXNttWVGs-unsplash.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638466248993072815_pepsi.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\638466248993072815_pepsi.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638466249991998175_ali-sedigh-moghadam--coHuTi1AOA-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\638466249991998175_ali-sedigh-moghadam--coHuTi1AOA-unsplash.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638466251344221173_taylor-heery-Fw8vp9G6FtE-unsplash.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\638466251344221173_taylor-heery-Fw8vp9G6FtE-unsplash.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638472139032630650_image_processing20221004-21837-1a7mahx.png",
+      "PackagePath": "staticwebassets\\images\\products\\638472139032630650_image_processing20221004-21837-1a7mahx.png"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638472140330915555_case.png",
+      "PackagePath": "staticwebassets\\images\\products\\638472140330915555_case.png"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638472141256908123_main.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\638472141256908123_main.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638472296843462131_lambor.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\638472296843462131_lambor.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638472308192317600_car.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\638472308192317600_car.jpg"
+    },
+    {
+      "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\638472331693392055_case.png",
+      "PackagePath": "staticwebassets\\images\\products\\638472331693392055_case.png"
     },
     {
       "Id": "D:\\2023-2024\\HK 2 2023-2024\\Lap_Trinh_Web\\SV20T1020570\\SV20T1020570.Web\\wwwroot\\images\\products\\macbook.jpg",

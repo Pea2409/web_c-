@@ -87,6 +87,27 @@ namespace SV20T1020570.Web.Controllers
         {
             try
             {
+                //Kiểm tra đầu vào và đưa các thông báo lỗi vào trong ModelState (nếu có)
+                if (string.IsNullOrWhiteSpace(data.ProductName))
+                    ModelState.AddModelError(nameof(data.ProductName), "Tên không được để trống");
+                if (data.CategoryID == 0)
+                    ModelState.AddModelError(nameof(data.CategoryID), "Vui lòng chọn loại hàng");
+                if (data.SupplierID == 0)
+                    ModelState.AddModelError(nameof(data.SupplierID), "Vui lòng chọn nhà cung cấp");
+                if (string.IsNullOrWhiteSpace(data.Unit))
+                    ModelState.AddModelError(nameof(data.Unit), "Đơn vị không được để trống");
+                if (string.IsNullOrWhiteSpace(data.Price.ToString()) || data.Price.ToString() == "0")
+                    ModelState.AddModelError(nameof(data.Price), "Vui lòng nhập giá mặt hàng");
+                if (data.Price < 0)
+                    ModelState.AddModelError(nameof(data.Price), "Vui lòng nhập giá mặt hàng lớn hơn 0");
+
+                //Thông qua thuộc tính IsValid của ModelState để kiểm tra xem có tồn tại lỗi hay không
+                if (!ModelState.IsValid)
+                {
+                    ViewBag.Title = data.ProductID == 0 ? "Bổ sung mặt hàng" : "Cập nhật thông tin mặt hàng";
+                    ViewBag.IsEdit = data.ProductID == 0 ? false : true;
+                    return View("Edit", data);
+                }
                 if (uploadPhoto != null)
                 {
                     string fileName = $"{DateTime.Now.Ticks}_{uploadPhoto.FileName}"; // tên file sẽ lưu
@@ -97,19 +118,6 @@ namespace SV20T1020570.Web.Controllers
                         uploadPhoto.CopyTo(stream);
                     }
                     data.Photo = fileName;
-                }
-                // Kiểm soát đầu vào và đưa các thông báo lỗi vào trong ModelState (nếu có)
-                if (string.IsNullOrWhiteSpace(data.ProductName))
-                    ModelState.AddModelError(nameof(data.ProductName), "Tên mặt hàng không được để trống");
-                if (string.IsNullOrWhiteSpace(data.Unit))
-                    ModelState.AddModelError(nameof(data.Unit), "Vui lòng nhập đơn vị tính");
-                
-                //Thông qua thuộc tính IsValid của ModelState để kiểm tra xem có tồn tại lỗi hay không
-                if (!ModelState.IsValid)
-                {
-                    ViewBag.Title = data.ProductID == 0 ? "Bổ sung mặt hàng" : "Cập nhật thông tin mặt hàng";
-                    ViewBag.IsEdit = data.ProductID == 0 ? false : true;
-                    return View("Edit", data);
                 }
 
                 if (data.ProductID == 0)
@@ -187,7 +195,27 @@ namespace SV20T1020570.Web.Controllers
         {
             try
             {
-                
+                ViewBag.Title = data.PhotoID == 0 ? "Bổ sung ảnh" : "Thay đổi ảnh";
+                //Kiểm tra đầu vào và đưa các thông báo lỗi vào trong ModelState (nếu có)
+                if (string.IsNullOrWhiteSpace(data.DisplayOrder.ToString()) || data.DisplayOrder.ToString() == "0")
+                    ModelState.AddModelError(nameof(data.DisplayOrder), "Vui lòng nhập vị trí của ảnh");
+                if (data.DisplayOrder < 1)
+                    ModelState.AddModelError(nameof(data.DisplayOrder), "Vui lòng nhập vị trí của ảnh lớn hơn 1");
+                List<ProductPhoto> listPhotos = ProductDataService.ListPhotos(data.ProductID);
+                foreach (ProductPhoto item in listPhotos)
+                {
+                    if (data.DisplayOrder == item.DisplayOrder && data.PhotoID != item.PhotoID)
+                    {
+                        ModelState.AddModelError(nameof(data.DisplayOrder), $"Thứ tự hiển thị {data.DisplayOrder} không hợp lệ");
+                        break;
+                    }
+                }
+                //Thông qua thuộc tính IsValid của ModelState  để kiểm tra xem có tồn tại lỗi hay không
+                if (!ModelState.IsValid)
+                {
+                    return View("Photo", data);
+                }
+
                 if (uploadPhoto != null)
                 {
                     string fileName = $"{DateTime.Now.Ticks}_{uploadPhoto.FileName}"; // tên file sẽ lưu
@@ -207,7 +235,7 @@ namespace SV20T1020570.Web.Controllers
                 {
                     bool result = ProductDataService.UpdatePhoto(data);
                 }
-                return RedirectToAction("Index");
+                return RedirectToAction("Edit", new { id = data.ProductID });
                
 
             }
@@ -221,7 +249,32 @@ namespace SV20T1020570.Web.Controllers
         {
             try
             {
-                
+                ViewBag.Title = data.AttributeID == 0 ? "Bổ sung Thuộc tính" : "Thay đổi Thuộc tính";
+                //Kiểm tra đầu vào và đưa các thông báo lỗi vào trong ModelState (nếu có)
+                if (string.IsNullOrWhiteSpace(data.AttributeName))
+                    ModelState.AddModelError(nameof(data.AttributeName), "Tên không được để trống");
+                if (string.IsNullOrWhiteSpace(data.AttributeValue))
+                    ModelState.AddModelError(nameof(data.AttributeValue), "Giá trị không được để trống");
+                if (string.IsNullOrWhiteSpace(data.DisplayOrder.ToString()) || data.DisplayOrder.ToString() == "0")
+                    ModelState.AddModelError(nameof(data.DisplayOrder), "Vui lòng nhập vị trí của ảnh");
+                if (data.DisplayOrder < 1)
+                    ModelState.AddModelError(nameof(data.DisplayOrder), "Vui lòng nhập vị trí của ảnh lớn hơn 1");
+                List<ProductAttribute> listAttributes = ProductDataService.ListAttributes(data.ProductID);
+                foreach (ProductAttribute item in listAttributes)
+                {
+                    if (data.DisplayOrder == item.DisplayOrder && data.AttributeID != item.AttributeID)
+                    {
+                        ModelState.AddModelError(nameof(data.DisplayOrder), $"Thứ tự hiển thị {data.DisplayOrder} không hợp lệ");
+                        break;
+                    }
+                }
+
+                //Thông qua thuộc tính IsValid của ModelState  để kiểm tra xem có tồn tại lỗi hay không
+                if (!ModelState.IsValid)
+                {
+                    return View("Attribute", data);
+                }
+
                 if (data.AttributeID == 0)
                 {
                     long id = ProductDataService.AddAttribute(data);
@@ -230,7 +283,7 @@ namespace SV20T1020570.Web.Controllers
                 {
                     bool result = ProductDataService.UpdateAttribute(data);
                 }
-                return RedirectToAction("Index");
+                return RedirectToAction("Edit", new { id = data.ProductID });
 
             }
             catch (Exception ex)

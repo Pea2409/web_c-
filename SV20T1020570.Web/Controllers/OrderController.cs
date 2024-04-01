@@ -30,7 +30,7 @@ namespace SV20T1020570.Web.Controllers
                     SearchValue = "",
                     Status = 0,
                     DateRange = string.Format("{0:dd/MM/yyyy} - {1:dd/MM/yyyy}",
-                                                DateTime.Today.AddMonths(-1),
+                                                DateTime.Today.AddMonths(-40),
                                                 DateTime.Today)
                 };
             }
@@ -174,6 +174,25 @@ namespace SV20T1020570.Web.Controllers
                 return Json("Vui lòng chọn người giao hàng");
 
             bool result = OrderDataService.ShipOrder(id, shipperID);
+            if (!result)
+                return Json("Đơn hàng không cho phép chuyển cho người giao hàng");
+
+            return Json("");
+        }
+
+        [HttpGet]
+        public IActionResult Address(int id = 0)
+        {
+            ViewBag.OrderID = id;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Address(int id = 0, string deliveryProvince = "", string deliveryAddress="")
+        {
+            if (deliveryProvince == null || deliveryAddress == null)
+                return Json("Vui lòng nhập đầy đủ thông tin");
+
+            bool result = OrderDataService.SaveAddress(id, deliveryProvince, deliveryAddress);
             if (!result)
                 return Json("Đơn hàng không cho phép chuyển cho người giao hàng");
 

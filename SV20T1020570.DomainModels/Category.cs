@@ -11,5 +11,6 @@ namespace SV20T1020570.DomainModels
         public int CategoryId { get; set; }
         public string CategoryName { get; set; } = "";
         public string Description { get; set; } = "";
+        public string Photo { get; set; } = "";
     }
 }

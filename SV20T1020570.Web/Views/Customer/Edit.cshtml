@@ -22,7 +22,8 @@
             <div class="form-group">
                 <label> Điện thoại </label>
                 <input type="number" class="form-control" name="Phone" value="@Model.Phone">
-                
+                @Html.ValidationMessage(nameof(Model.Phone), new { @style = "color:#f00" })
+
             </div>
             <div class="form-group">
                 <label> Email </label>
@@ -32,6 +33,7 @@
             <div class="form-group">
                 <label> Địa chỉ </label>
                 <input type="text" class="form-control" name="Address" value="@Model.Address">
+
             </div>
             <div class="form-group">
                 <label> Tỉnh thành</label>
@@ -53,7 +55,7 @@
             </div>
             <div class="form-group">
                 <label>Trạng thái</label><br>
-                <input type="checkbox" name="IsLocked" value="true" @(Model.IsLocked ? "checked" : "")> Tài khoản bị khoá
+                <input type="checkbox" name="IsLocked" @(Model.IsLocked ? "checked" : "")> Tài khoản bị khoá
             </div>
             <div class="form-group">
                 @Html.ValidationMessage("Error", new { @style = "color:#f00" })

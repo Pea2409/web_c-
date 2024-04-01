@@ -78,8 +78,11 @@ namespace SV20T1020570.Web.Controllers
                     ModelState.AddModelError(nameof(data.CustomerName), "Tên không được để trống");
                 if (string.IsNullOrWhiteSpace(data.ContactName))
                     ModelState.AddModelError(nameof(data.ContactName), "Tên giao dịch không được để trống");
+                if (string.IsNullOrWhiteSpace(data.Phone))
+                    ModelState.AddModelError(nameof(data.Phone), "Vui lòng nhập số điện thoại của khách hàng");
                 if (string.IsNullOrWhiteSpace(data.Email))
                     ModelState.AddModelError(nameof(data.Email), "Vui lòng nhập email khách hàng");
+                
                 if (string.IsNullOrWhiteSpace(data.Province))
                     ModelState.AddModelError(nameof(data.Province), "Vui lòng chọn tỉnh/thành");
 

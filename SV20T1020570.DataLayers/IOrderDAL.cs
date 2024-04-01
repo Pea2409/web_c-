@@ -46,10 +46,13 @@ namespace SV20T1020570.DataLayers
         /// Thêm mặt hàng được bán trong đơn hàng) theo nguyên tắc: 
         /// - Nếu mặt hàng chưa có trong chi tiết đơn hàng thì bổ sung 
         /// - Nếu mặt hàng đã có trong chi tiết đơn hàng thì cập nhật lại số lượng và giá bán   /// </summary>  
-        bool SaveDetail(int orderID, int productID, int quantity, decimal salePrice);  /// <summary> 
-                                                                                       /// Xóa 1 mặt hàng ra khỏi đơn hàng 
-                                                                                       /// </summary> 
+        bool SaveDetail(int orderID, int productID, int quantity, decimal salePrice);  
+        /// <summary> 
+        /// Xóa 1 mặt hàng ra khỏi đơn hàng 
+        /// </summary> 
         bool DeleteDetail(int orderID, int productID);
+        bool SaveAddress(int orderID, string deliveryProvince, string deliveryAddress);
+
     }
 
 }

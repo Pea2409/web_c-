@@ -27,7 +27,7 @@
             </div>
             <div class="form-group">
                 <div class="col-lg-offset-2 col-sm-10">
-                    <img id="Photo" src="~/images/products/@Model.Photo" class="img img-bordered" style="width:150px" />
+                    <img id="Photo" src="~/images/products/@(string.IsNullOrWhiteSpace(Model.Photo) ? "no-image.jpg" : Model.Photo)" class="img img-bordered" style="width:150px" />
                 </div>
             </div>
             <div class="form-group">
@@ -40,13 +40,14 @@
                 <label class="control-label col-sm-2">Thứ tự hiển thị:</label>
                 <div class="col-sm-10">
                     <input type="number" class="form-control" name="DisplayOrder" value="@Model.DisplayOrder" />
+                    @Html.ValidationMessage(nameof(Model.DisplayOrder), new { @style = "color: #f00" })
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2">Trạng thái:</label>
                 <div class="col-sm-10">
                     <div class="checkbox">
-                        <label><input type="checkbox" value="true" name="IsHidden">Không hiển thị</label>
+                        <label><input type="checkbox" value="true" name="IsHidden" @(Model.IsHidden ? "checked" : "")>Hiển thị</label>
                     </div>
                 </div>
             </div>

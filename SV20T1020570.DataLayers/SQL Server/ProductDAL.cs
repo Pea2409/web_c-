@@ -293,7 +293,8 @@ namespace SV20T1020570.DataLayers.SQL_Server
             List<ProductPhoto> list = new List<ProductPhoto>();
             using (var connection = OpenConnection())
             {
-                var sql = @"select * from ProductPhotos where ProductID = @ProductID";
+                var sql = @"select * from ProductPhotos where ProductID = @ProductID 
+                        order by DisplayOrder ASC";
                 var parameters = new
                 {
                     productID = productID,

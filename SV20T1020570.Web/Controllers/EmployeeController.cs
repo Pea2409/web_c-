@@ -152,7 +152,7 @@ namespace SV20T1020570.Web.Controllers
             var model = CommonDataService.GetEmployee(id);
             if (model == null)
                 return RedirectToAction("Index");
-            ViewBag.AllowDelete = CommonDataService.IsUsedEmployee(id);
+            ViewBag.AllowDelete = !CommonDataService.IsUsedEmployee(id);
 
             return View(model);
         }

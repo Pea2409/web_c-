@@ -19,7 +19,7 @@ border:1px solid #ccc; margin:5px 0px 5px 0px; padding:5px;">
         <div class="row">
             <div class="col-sm-3">
                 <img class="img img-responsive img-bordered"
-                     src="~/images/products/@item.Photo" alt="NoPhoto">
+                     src="~/images/products/@(string.IsNullOrWhiteSpace(item.Photo) ? "no-image.jpg" : item.Photo)" alt="no-image">
             </div>
             <div class="col-sm-9">
                 <div class="form-group-sm">

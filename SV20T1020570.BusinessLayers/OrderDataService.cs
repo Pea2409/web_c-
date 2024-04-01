@@ -193,6 +193,17 @@ namespace SV20T1020570.BusinessLayers
             }
             return false;
         }
+        public static bool SaveAddress(int orderID, string deliveryProvince, string deliveryAddress)
+        {
+            Order? data = orderDB.Get(orderID);
+            if (data == null)
+                return false;
+            if (data.Status == Constants.ORDER_INIT || data.Status == Constants.ORDER_ACCEPTED)
+            {
+                return orderDB.SaveAddress(orderID, deliveryProvince, deliveryAddress);
+            }
+            return false;
+        }
         /// <summary>
         /// Xóa một mặt hàng ra khỏi đơn hàng
         /// </summary>
